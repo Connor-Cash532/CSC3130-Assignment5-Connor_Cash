@@ -71,13 +71,6 @@ public class P5 {
     }
 
 
-    /*
-//             if (s[i].charAt(charIndex) != ' ') {
-//                 bucketIndex = (s[i].charAt(charIndex) - 97) + 1;
-//             }
-//             else
-//                 bucketIndex = 0;
-     */
     public static int getIndex(String s, int index){
         int bucketIndex = 0; //O(1)
         if(s.length() > index){ //O(1)
@@ -88,35 +81,4 @@ public class P5 {
 
 
 
-//    public static String[] padString(String[] s){
-//        int max = calcMax(s);
-//        int difference = 0;
-//        int j = 0;
-//        for(int i = 0; i < s.length; i++){
-//            if(s[i].length() < max){
-//                difference = max - s[i].length();
-//                for(j = 0; j < difference; j++ ){
-//                    s[i] += " ";
-//                }
-//            }
-//        }
-//
-//        return s;
-//    }
-//
-//    public static String[] unpadString(String[] s){
-//        String[] temp = new String[s.length];
-//        String tempString = "";
-//        int j = 0;
-//        for(int i = 0; i < s.length; i++){
-//            for(j = 0; j < s[i].length(); j++){
-//                if(s[i].charAt(j) != ' ')
-//                    tempString += s[i].charAt(j);
-//            }
-//            temp[i] = tempString;
-//            tempString = "";
-//        }
-//
-//        return temp;
-//    }
 }

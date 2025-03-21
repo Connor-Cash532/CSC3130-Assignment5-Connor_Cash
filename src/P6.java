@@ -29,7 +29,6 @@ public class P6 {
         String tempString = "";
         for(int i = 0; i < s.length(); i++){ //O(m)
             if(s.charAt(i) == delimeter){ //O(m)+O(n)
-                //System.out.println(s.substring(count,i));
                 tempString = s.substring(count,i);//O(p)
                 if(!words.containsValue(tempString) && !words.containsKey(pattern.charAt(count2)))//O(n)
                     words.put(pattern.charAt(count2), tempString);//O(1)cle
@@ -40,7 +39,6 @@ public class P6 {
                 temp2 += s.charAt(i);
         }
 
-        //System.out.println(s.substring(count,s.length()));
         tempString = s.substring(count);
         if(numPat.length() != words.size() && count2 < pattern.length() && count < s.length()){ //O(1)
             if(!words.containsValue(tempString)) //O(n)
@@ -52,9 +50,6 @@ public class P6 {
             temp += words.get(pattern.charAt(i));//O(1)
         }
 
-        //System.out.println(words);
-        // System.out.println(temp);
-        // System.out.println(temp2);
 
         return temp.equals(temp2);//O(1)
     }
